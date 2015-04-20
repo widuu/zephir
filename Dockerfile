@@ -8,7 +8,7 @@ ADD ./sources.list /etc/apt/sources.list
 # 更新镜像源 
 RUN apt-get update
 # 安装开发环境
-RUN apt-get  install gcc make re2c libpcre3 libpcre3-dev php5 php5-dev php5-json
+RUN apt-get  install gcc make re2c libpcre3 libpcre3-dev php5 php5-dev php5-json -y
 # 安装ssh server
 RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
