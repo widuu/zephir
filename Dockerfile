@@ -3,7 +3,7 @@ FROM ubuntu:14.04
 # 签名啦
 MAINTAINER widuu "admin@widuu.com"
 # 变换阿里云镜像源
-RUN  sudo mv /etc/apt/sources.list /etc/apt/sources.list.backup
+RUN  mv /etc/apt/sources.list /etc/apt/sources.list.backup
 ADD ./sources.list /etc/apt/sources.list
 # 更新镜像源 
 RUN apt-get update
