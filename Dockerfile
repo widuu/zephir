@@ -12,7 +12,7 @@ RUN apt-get  install gcc make re2c libpcre3 libpcre3-dev php5 php5-dev php5-json
 # 安装ssh server
 RUN apt-get install -y openssh-server
 RUN mkdir -p /var/run/sshd
-RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/ss
+RUN sed -i 's/PermitRootLogin without-password/PermitRootLogin yes/' /etc/ssh/sshd_config
 # 安装git
 RUN apt-get install git -y
 # clone zephir 并安装
